@@ -1,6 +1,6 @@
-from flask_migrate import Migrate
 from flask import Flask
+from flask_migrate import Migrate
 
 
-def init_app(app:Flask):
+def init_app(app: Flask):
     Migrate(app, app.db)

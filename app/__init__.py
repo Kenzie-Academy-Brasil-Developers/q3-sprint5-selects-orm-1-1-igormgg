@@ -1,7 +1,9 @@
-from flask import Flask
-from app.configs import database,commands,migrate
-from app import routes
 from os import getenv
+
+from flask import Flask
+
+from app import routes
+from app.configs import commands, database, migrate
 
 
 def create_app():
@@ -15,4 +17,3 @@ def create_app():
     commands.init_app(app)
     routes.init_app(app)
     return app
-
